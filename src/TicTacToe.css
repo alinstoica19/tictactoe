@@ -1,0 +1,86 @@
+
+body {
+    margin: 0; /* Elimină marginile implicite ale paginii */
+    padding: 0; /* Elimină padding-ul implicit al paginii */
+    font-family: 'Arial', sans-serif; /* Setează fontul implicit al paginii la Arial */
+    background-color: #2B547E; /* Culoarea de fundal a întregii pagini este un albastru închis */
+    color: #333; /* Culoarea implicită a textului este un gri închis */
+}
+
+
+.container {
+    display: flex; /* Utilizează Flexbox pentru alinierea elementelor */
+    flex-direction: column; /* Elementele copil sunt aranjate în coloană */
+    width: 500px; /* Lățimea fixă a containerului */
+    align-items: center; /* Aliniază elementele copil orizontal în centru */
+    justify-content: center; /* Aliniază elementele copil vertical în centru */
+    margin: 50px auto; /* Centrarea pe orizontală și adaugă un spațiu de 50px sus și jos */
+    padding: 20px; /* Padding în interiorul containerului */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* O umbră pentru efect de adâncime */
+    background-color: #fff; /* Culoarea de fundal a containerului este albă */
+    border-radius: 15px; /* Rotunjirea colțurilor containerului */
+}
+
+
+table {
+    border-collapse: collapse; /* Colapsează bordurile celulelor pentru a forma o bordură unică */
+    margin-top: 20px; /* Spațiu de sus față de elementele anterioare */
+}
+
+table td {
+    border: 2px solid #007bff; /* Bordura celulelor, albastră deschis */
+    width: 100px; /* Lățimea fiecărei celule */
+    height: 100px; /* Înălțimea fiecărei celule */
+    font-size: 36px; /* Dimensiunea fontului în celule */
+    text-align: center; /* Aliniază textul în centru orizontal */
+    vertical-align: middle; /* Aliniază textul în centru vertical */
+    cursor: pointer; /* Cursorul devine pointer când se trece peste celule */
+    transition: background-color 0.3s, transform 0.3s; /* Tranziție pentru hover */
+    color: #333; /* Culoarea textului în celule */
+    font-weight: bold; /* Grosimea fontului în celule */
+}
+
+table td:hover {
+    background-color: #e3f2fd; /* Schimbă culoarea de fundal la hover */
+    transform: scale(1.1); /* Mărește ușor celula la hover */
+}
+
+
+.game-info {
+    font-size: 24px; /* Mărimea fontului pentru informațiile jocului */
+    color: #333; /* Culoarea textului */
+    margin-bottom: 15px; /* Spațiu dedesubt */
+}
+
+.winner-message {
+    font-size: 30px; /* Mărimea fontului pentru mesajul câștigătorului */
+    color: #dc3545; /* Culoarea textului */
+    margin: 20px 0; /* Spațiu sus și jos */
+    padding: 10px; /* Padding în interiorul mesajului */
+    border-radius: 5px; /* Rotunjirea colțurilor mesajului */
+    background-color: #fff3cd; /* Culoarea de fundal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Umbră pentru efect de adâncime */
+    animation: winnerAnimation 1s ease; /* Animație pentru afișarea mesajului */
+}
+
+@keyframes winnerAnimation {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.restart-button {
+    padding: 10px 20px; /* Padding pentru buton */
+    margin-top: 15px; /* Spațiu dedesubtul butonului */
+    background-color: #28a745; /* Culoarea de fundal a butonului */
+    color: white; /* Culoarea textului */
+    border: none; /* Fără bordură */
+    border-radius: 5px; /* Rotunjirea colțurilor butonului */
+    cursor: pointer; /* Cursorul devine pointer când se trece peste buton */
+    font-size: 18px; /* Mărimea fontului */
+    transition: background-color 0.3s; /* Tranziție pentru hover */
+}
+
+.restart-button:hover {
+    background-color: #218838; /* Schimbă culoarea de fundal la hover */
+}
